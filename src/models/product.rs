@@ -1,4 +1,3 @@
-use crate::db_connection::establish_connection;
 use crate::diesel::ExpressionMethods;
 use crate::schema::products::dsl::*;
 use diesel::PgConnection;

@@ -1,1 +1,2 @@
-pub mod user_error;
+pub mod application_error;
+pub mod server_error;
