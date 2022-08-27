@@ -6,13 +6,13 @@ use crate::{
     models::user::{RegisterUser, User},
 };
 
-use super::products::pool_handler;
+use super::pg_pool_handler;
 
 pub fn register(
     new_user: web::Json<RegisterUser>,
     pool: web::Data<PgPool>,
 ) -> Result<HttpResponse, ServerError> {
-    let pool = pool_handler(pool)?;
+    let pool = pg_pool_handler(pool)?;
     // validate user password and password confirmation
     let register_user = new_user
         .into_inner()

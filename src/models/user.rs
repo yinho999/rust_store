@@ -29,13 +29,13 @@ impl User {
     }
 
     pub fn create(
-        registerUser: &RegisterUser,
+        register_user: &RegisterUser,
         conn: &PgConnection,
     ) -> Result<User, ApplicationError> {
-        let hashed_password = Self::hash_password(&registerUser.password)?;
+        let hashed_password = Self::hash_password(&register_user.password)?;
         let user = NewUser {
-            email: registerUser.email.to_string(),
-            company: registerUser.company.to_string(),
+            email: register_user.email.to_string(),
+            company: register_user.company.to_string(),
             password: hashed_password,
             created_at: Local::now().naive_local(),
         };

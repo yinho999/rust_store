@@ -18,3 +18,9 @@ jsonwebtoken = "8"
 bcrypt = "0.13"
 chrono = {version = "0.4", features = ["serde"]}
 csrf = "0.4.1"
+actix-identity = "0.5.2"
+actix-session = {version = "0.7.1", features = ["redis-rs-session"] }
+data-encoding = "2.3.2"
+futures-util = "0.3.23"
+actix-utils = "3.0.0"
+actix-cors = "0.6.2"
